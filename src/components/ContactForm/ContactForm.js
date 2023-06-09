@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
+import PropTypes from 'prop-types';
 
 function ContactForm({ contacts, onAddContact }) {
   const [name, setName] = useState("");
@@ -56,5 +57,16 @@ function ContactForm({ contacts, onAddContact }) {
     </form>
   );
 }
+
+ContactForm.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onAddContact: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
