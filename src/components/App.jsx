@@ -33,14 +33,15 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Phonebook</h1>
+      <h1 className="heading">Phonebook</h1>
       <ContactForm contacts={contacts} onAddContact={handleAddContact} />
-      <h2>Contacts</h2>
+      <h2 className="contacts_title">Contacts</h2>
       <Filter filter={filter} handleFilterChange={handleFilterChange} />
       <ContactList contacts={filteredContacts} onDeleteContact={onDeleteContact} />
     </div>
   );
 };
+
 export default App;
 
 

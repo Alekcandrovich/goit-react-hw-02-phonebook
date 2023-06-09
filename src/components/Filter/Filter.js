@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import css from './filter.module.css';
 
 function Filter({ filter, handleFilterChange }) {
   return (
     <div>
-      <label htmlFor="filterInput">Find contacts by name</label>
+      <label className={css.filterLabel} htmlFor="filterInput">
+        Find contacts by name
+      </label>
       <input
+        className={css.filterInput}
         id="filterInput"
         type="text"
         name="filter"

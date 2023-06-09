@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import css from './contactListItem.module.css';
 
 function ContactListItem({ contact, onDeleteContact }) {
   return (
-    <li key={contact.id}>
-      {contact.name}: {contact.number}{" "}
-      <button type="button" onClick={() => onDeleteContact(contact.id)}>
+    <li key={contact.id} className={css.contactsItem}>
+      {contact.name}: {contact.number}{' '}
+      <button
+        className={css.deleteButton}
+        type="button"
+        onClick={() => onDeleteContact(contact.id)}
+      >
         Delete
       </button>
     </li>
