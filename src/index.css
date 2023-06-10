@@ -36,3 +36,9 @@ code {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.contacts_not {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff0000;
+}
