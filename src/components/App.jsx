@@ -62,7 +62,7 @@ class App extends Component {
         {filteredContacts.length > 0 ? (
           <ContactList
             contacts={filteredContacts}
-            onDeleteContact={this.handleDeleteContact}
+            onDeleteContact={this.onDeleteContact}
           />
         ) : (
           <p className="contacts_not">No contacts found</p>

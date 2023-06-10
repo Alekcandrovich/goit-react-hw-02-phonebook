@@ -16,7 +16,7 @@ class ContactListItem extends Component {
         <button
           className={css.deleteButton}
           type="button"
-          onClick={this.onDeleteContact}
+          onClick={this.handleDeleteContact}
         >
           Delete
         </button>
